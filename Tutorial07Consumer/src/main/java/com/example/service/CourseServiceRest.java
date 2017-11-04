@@ -19,9 +19,9 @@ public class CourseServiceRest implements CourseService {
 	private CourseDAO courseDAO;
 
 	@Override
-	public CourseModel selectCourse(String idCourse) {
-		log.info("REST - select course with id {}", idCourse);
-		return courseDAO.selectCourse(idCourse);
+	public CourseModel selectCourse(String id) {
+		log.info("REST - select course with id {}", id);
+		return courseDAO.selectCourse(id);
 	}
 
 	@Override
@@ -29,5 +29,4 @@ public class CourseServiceRest implements CourseService {
 		log.info("REST - select all courses");
 		return courseDAO.selectAllCourses();
 	}
-
 }

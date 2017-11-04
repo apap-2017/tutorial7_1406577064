@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class ApapTutorial06Application
+public class Tutorial07ConsumerApplication
 {
 
     public static void main (String[] args)
     {
-        SpringApplication.run (ApapTutorial06Application.class, args);
+        SpringApplication.run (Tutorial07ConsumerApplication.class, args);
     }
     
     @Bean

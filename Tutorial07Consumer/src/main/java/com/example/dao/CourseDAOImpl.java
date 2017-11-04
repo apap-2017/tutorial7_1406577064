@@ -22,7 +22,8 @@ public class CourseDAOImpl implements CourseDAO {
 
 	@Override
 	public List<CourseModel> selectAllCourses() {
-		List<CourseModel> courses = restTemplate.getForObject("http://localhost:8080/rest/course/viewall", (Class<List<CourseModel>>) ((Class)List.class));
+		List<CourseModel> courses = restTemplate.getForObject("http://localhost:8080/rest/course/viewall",
+				(Class<List<CourseModel>>) ((Class) List.class));
 		return courses;
 	}
 }
