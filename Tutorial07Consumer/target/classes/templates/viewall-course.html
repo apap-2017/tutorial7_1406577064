@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>View All Courses</title>
+<div th:replace="fragments/header"></div>
+</head>
+<body>
+	<h1>All Courses</h1>
+	<table id="myTable">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Name</th>
+				<th>SKS</th>
+				<th>Delete</th>
+				<th>Update</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="course,iterationStatus: ${courses}"
+				th:class="${iterationStatus.odd}? 'odd'">
+				<td th:text="${iterationStatus.count}">No. 1</td>
+				<td th:text="${course.name}">Name</td>
+				<td th:text="${course.credits}">SKS</td>
+				<td><a th:href="'/course/delete/' + ${course.idCourse}">Delete</a></td>
+				<td><a th:href="'/course/update/' + ${course.idCourse}">Update</a><br /></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<div th:replace="fragments/footer"></div>
+</body>
+</html>
